@@ -1,0 +1,22 @@
+table{
+  width: 100%;
+}
+th, td{
+  border-top: 1px solid #96949445;
+  padding: 10px 5px;
+}
+th{
+  text-align: left;
+  background: #96949445;
+}
+td{
+  text-align: right;
+}
+button{
+  background-color: #008CBA;;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+
