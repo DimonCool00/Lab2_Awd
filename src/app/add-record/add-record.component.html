@@ -1,17 +1,24 @@
 <div>
   <h1>Add record</h1>
-  <p>
-    <label for="date">Jogging date:</label>
-  </p>
-  <input type="date" id="date" name="date" value="mm/dd/yyyy"/>
-  <p>
-    <label for="distance">Distance(m):</label>
-  </p>
-  <input type="text" value="0" id="distance" name="distance"/>
-  <p>
-    <label for="time">Time(s):</label>
-  </p>
-  <input type="text" value="0" id="time" name="time"/>
-  <p></p>
-  <button>Save</button>
+  <form #myForm="ngForm">
+        <p>
+          <label for="date">Jogging date:</label>
+        </p>
+        <input type="date" id="date" name="date" value="mm/dd/yyyy" [(ngModel)]="date"/>
+        <p>
+          <label for="distance">Distance(m):</label>
+        </p>
+        <input type="text" value="0" id="distance" name="distance" [(ngModel)]="distance" />
+        <p>
+          <label for="time">Time(s):</label>
+        </p>
+        <input type="text" value="0" id="time" name="time" [(ngModel)]="time"/>
+        <p></p>
+        <button (click)="addRes()">Save</button>
+  </form>
+  <div><h3>Adding Results:</h3>
+    <ul *ngFor="let r of results">
+      <li>{{r.date}} - {{r.distance}} - {{r.time}}</li>
+    </ul>
+  </div>`
 </div>
